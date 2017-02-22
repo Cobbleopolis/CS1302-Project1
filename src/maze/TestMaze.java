@@ -8,6 +8,10 @@ import java.util.Scanner;
 public class TestMaze {
     public static void main(String[] args){
 
+        for (String arg : args)
+            if (arg.equalsIgnoreCase("--debugPrint") || arg.equalsIgnoreCase("-dP"))
+                Maze.debugPrint = true;
+
         int[][] mazeArray = {
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 {0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0},

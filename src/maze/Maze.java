@@ -8,7 +8,7 @@ package maze;
 public class Maze {
 
     //TODO remove before final turn in?
-    static final private boolean DEBUG_PRINT = true;
+    static boolean debugPrint = false;
     private int[][] arrMaze;
     private Direction direction;
     private int r;  // x position of the mouse
@@ -27,7 +27,7 @@ public class Maze {
     public void displayMaze() {
         for (int i = 0; i < arrMaze.length; i++) {
             for (int j = 0; j < arrMaze[i].length; j++) {
-                System.out.print(getDispChar(j, i, false, DEBUG_PRINT) + " ");
+                System.out.print(getDispChar(j, i, false, debugPrint) + " ");
             }
             System.out.println();
         }
@@ -37,7 +37,7 @@ public class Maze {
     public void displayPath() {
         for (int i = 0; i < arrMaze.length; i++) {
             for (int j = 0; j < arrMaze[i].length; j++) {
-                System.out.print(getDispChar(j, i, true, DEBUG_PRINT) + " ");
+                System.out.print(getDispChar(j, i, true, debugPrint) + " ");
             }
             System.out.println();
         }
