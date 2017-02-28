@@ -323,24 +323,24 @@ public class Maze {
 
     /**
      * Gets the character to print for the specified x and y coordinates in the array. This a will not include any debug output.
-     * @param x            The x location of the location to get the character for.
-     * @param y            The y location of the location to get the character for.
-     * @param showSolution A boolean determining if the solution for the maze should be shown.
-     * @return The appropriate character to print for the specified x and y location
+     * @param x        The x location of the location to get the character for.
+     * @param y        The y location of the location to get the character for.
+     * @param showPath A boolean determining if the solution for the maze should be shown.
+     * @return The appropriate character to print for the specified x and y location.
      */
-    private String getDispChar(int x, int y, boolean showSolution) {
-        return getDispChar(x, y, showSolution, false);
+    private String getDispChar(int x, int y, boolean showPath) {
+        return getDispChar(x, y, showPath, false);
     }
 
     /**
      * Gets the character to print for the specified x and y coordinates in the array.
-     * @param x            The x location of the location to get the character for.
-     * @param y            The y location of the location to get the character for.
-     * @param showSolution A boolean determining if the solution for the maze should be shown.
-     * @param debug        A boolean determining if the debug output should be shown.
-     * @return The appropriate character to print for the specified x and y location
+     * @param x        The x location of the location to get the character for.
+     * @param y        The y location of the location to get the character for.
+     * @param showPath A boolean determining if the solution for the maze should be shown.
+     * @param debug    A boolean determining if the debug output should be shown.
+     * @return The appropriate character to print for the specified x and y location.
      */
-    private String getDispChar(int x, int y, boolean showSolution, boolean debug) {
+    private String getDispChar(int x, int y, boolean showPath, boolean debug) {
         int mazeVal = getValueAt(x, y);
         if (x == xPos && y == yPos)
             if (debug)
@@ -363,9 +363,7 @@ public class Maze {
         else if (mazeVal == 1)
             return " ";
         else if (mazeVal == 2)
-            return "~";
-        else if (mazeVal == 3)
-            return (showSolution) ? "*" : " ";
+            return showPath ? "~" : " ";
         else
             return "?";
     }
