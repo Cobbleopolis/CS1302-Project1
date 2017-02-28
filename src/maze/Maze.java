@@ -23,12 +23,12 @@ public class Maze {
     private Direction direction;
 
     /**
-     * The x position of the mouse
+     * The x position of the mouse.
      */
     private int xPos;  // x position of the mouse
 
     /**
-     * The y position of the mouse
+     * The y position of the mouse.
      */
     private int yPos;  //y position of the mouse
 
@@ -87,64 +87,6 @@ public class Maze {
     }
 
     /**
-     * Moves the mouse north if possible. Otherwise the mouse does not move
-     *
-     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
-     */
-    private void moveNorth() {
-        //TODO implement
-
-    }
-
-    /**
-     * Moves the mouse south if possible. Otherwise the mouse does not move
-     *
-     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
-     */
-    private void moveSouth() {
-        //TODO implement
-
-    }
-
-    /**
-     * Moves the mouse east if possible. Otherwise the mouse does not move
-     *
-     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
-     */
-    private void moveEast() {
-        //TODO implement
-
-    }
-
-    /**
-     * Moves the mouse west if possible. Otherwise the mouse does not move
-     *
-     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
-     */
-    private void moveWest() {
-        //TODO implement
-
-    }
-
-    /**
-     * Checks if the mouses current location is at the exit. This sets {@link Maze#exitFound} appropriately.
-     * @return The current value of {@link Maze#exitFound} after the check.
-     */
-    private boolean isAnExit() {
-        //TODO implement
-
-        return exitFound;
-    }
-
-    /**
-     * Finds the path without stopping at every step.
-     */
-    public void findExit() {
-        //TODO implement
-
-    }
-
-    /**
      * Determines if the mouse can move north based on its current location.
      * @return {@code true} if the mouse can move north, {@code false} otherwise.
      */
@@ -174,6 +116,63 @@ public class Maze {
      */
     private boolean canMoveWest() {
         return getValueAt(xPos - 1, yPos) > 0;
+    }
+
+    /**
+     * Moves the mouse north if possible. Otherwise the mouse does not move.
+     * <p>
+     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
+     */
+    private void moveNorth() {
+        //TODO implement
+
+    }
+
+    /**
+     * Moves the mouse south if possible. Otherwise the mouse does not move.
+     * <p>
+     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
+     */
+    private void moveSouth() {
+        //TODO implement
+
+    }
+
+    /**
+     * Moves the mouse east if possible. Otherwise the mouse does not move
+     * <p>
+     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
+     */
+    private void moveEast() {
+        //TODO implement
+
+    }
+
+    /**
+     * Moves the mouse west if possible. Otherwise the mouse does not move.
+     * <p>
+     * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
+     */
+    private void moveWest() {
+        //TODO implement
+
+    }
+
+    /**
+     * Checks if the mouses current location is at the exit. This sets {@link Maze#exitFound} appropriately.
+     * @return The current value of {@link Maze#exitFound} after the check.
+     */
+    private boolean isAnExit() {
+        //TODO implement
+
+        return exitFound;
+    }
+
+    /**
+     * Finds the path without stopping at every step.
+     */
+    public void findExit() {
+        //TODO implement
     }
 
     /**
@@ -253,8 +252,8 @@ public class Maze {
     }
 
     /**
-     * Moves the mouse forward if possible. Otherwise the mouse does not move
-     *
+     * Moves the mouse forward if possible. Otherwise the mouse does not move.
+     * <p>
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveForward() {
@@ -262,8 +261,8 @@ public class Maze {
     }
 
     /**
-     * Moves the mouse backward if possible. Otherwise the mouse does not move
-     *
+     * Moves the mouse backward if possible. Otherwise the mouse does not move.
+     * <p>
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveBackward() {
@@ -271,8 +270,8 @@ public class Maze {
     }
 
     /**
-     * Moves the mouse to the right if possible. Otherwise the mouse does not move
-     *
+     * Moves the mouse to the right if possible. Otherwise the mouse does not move.
+     * <p>
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveRight() {
@@ -280,8 +279,8 @@ public class Maze {
     }
 
     /**
-     * Moves the mouse to the left if possible. Otherwise the mouse does not move
-     *
+     * Moves the mouse to the left if possible. Otherwise the mouse does not move.
+     * <p>
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveLeft() {
