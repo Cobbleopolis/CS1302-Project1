@@ -25,12 +25,12 @@ public class Maze {
     /**
      * The x position of the mouse.
      */
-    private int xPos;  // x position of the mouse
+    private int xPos;
 
     /**
      * The y position of the mouse.
      */
-    private int yPos;  //y position of the mouse
+    private int yPos;
 
     /**
      * A boolean representing if the mouse has found the exit.
