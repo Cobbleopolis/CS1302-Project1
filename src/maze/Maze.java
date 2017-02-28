@@ -288,6 +288,20 @@ public class Maze {
     }
 
     /**
+     * Turns the mouse 90° to the right.
+     */
+    private void turnRight() {
+        //TODO implemnt
+    }
+
+    /**
+     * Turns the mouse 90° to the left.
+     */
+    private void turnLeft() {
+        //TODO implement
+    }
+
+    /**
      * Determines if a a location is within the maze array.
      * @param x The x value of the location.
      * @param y The y value of the location.
