@@ -45,40 +45,41 @@ public class Maze {
 
 
     public boolean takeStep() {
-        //complete the code here
+        //TODO implement
 
         return isAnExit();
     }
 
     private void moveNorth() {
-        //complete the code here
+        //TODO implement
 
     }
 
     private void moveSouth() {
-        //complete the code here
+        //TODO implement
 
     }
 
     private void moveEast() {
-        //complete the code here
+        //TODO implement
 
     }
 
     private void moveWest() {
-        //complete the code here
+        //TODO implement
 
     }
 
 
     private boolean isAnExit() {
-        //complete the code here
+        //TODO implement
+
         return exitFound;
     }
 
     //finds the path without stopping at every step
     public void findExit() {
-        //complete the code here
+        //TODO implement
 
     }
 
