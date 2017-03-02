@@ -322,6 +322,16 @@ public class Maze {
     }
 
     /**
+     * Sets the value in the maze array to the provided value.
+     * @param x     The x value of the location.
+     * @param y     The y value of the location.
+     * @param value The new value to be stored in the array.
+     */
+    private void setValueAt(int x, int y, int value) {
+        arrMaze[y][x] = value;
+    }
+
+    /**
      * Gets the character to print for the specified x and y coordinates in the array. This a will not include any debug output.
      * @param x        The x location of the location to get the character for.
      * @param y        The y location of the location to get the character for.
