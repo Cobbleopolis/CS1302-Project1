@@ -173,6 +173,7 @@ public class Maze {
      */
     public void findExit() {
         //TODO implement
+
     }
 
     /**
@@ -257,7 +258,11 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveForward() {
-        //TODO implement
+        //Finish implementing
+        if (canMoveForward()) {
+            setValueAt(xPos, yPos, 2);
+            yPos =- 1;
+        }
     }
 
     /**
@@ -266,7 +271,11 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveBackward() {
-        //TODO implement
+        //Finish implementing
+        if (canMoveBackwards()) {
+            setValueAt(xPos, yPos, 2);
+            yPos =+ 1;
+        }
     }
 
     /**
@@ -275,7 +284,11 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveRight() {
-        //TODO implement
+        //Finish implementing
+        if (canMoveRight()) {
+            setValueAt(xPos, yPos, 2);
+            xPos =+ 1;
+        }
     }
 
     /**
@@ -284,14 +297,20 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveLeft() {
-        //TODO implement
+        //Finish implementing
+
+        if (canMoveLeft()) {
+            setValueAt(xPos, yPos, 2);
+            xPos =- 1;
+        }
     }
 
     /**
      * Turns the mouse 90° to the right.
      */
     private void turnRight() {
-        //TODO implemnt
+        //TODO implement
+        turnRight();
     }
 
     /**
@@ -299,6 +318,7 @@ public class Maze {
      */
     private void turnLeft() {
         //TODO implement
+        turnLeft();
     }
 
     /**
