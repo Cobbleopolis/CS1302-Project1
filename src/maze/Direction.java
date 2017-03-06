@@ -22,16 +22,16 @@ public enum Direction {
     private void turnLeft() {
         switch (direction) {
             case NORTH:
-                direction = Direction.WEST;
+                direction = Direction.NORTH;
                 break;
             case SOUTH:
-                direction = Direction.EAST;
-                break;
-            case WEST:
                 direction = Direction.SOUTH;
                 break;
+            case WEST:
+                direction = Direction.WEST;
+                break;
             case EAST:
-                direction = Direction.NORTH;
+                direction = Direction.EAST;
         }
     }
 
@@ -54,16 +54,16 @@ public enum Direction {
     private void turnBackwards() {
         switch (direction) {
             case NORTH:
-                direction = Direction.EAST;
+                direction = Direction.SOUTH;
                 break;
             case SOUTH:
-                direction = Direction.WEST;
-                break;
-            case WEST:
                 direction = Direction.NORTH;
                 break;
+            case WEST:
+                direction = Direction.EAST;
+                break;
             case EAST:
-                direction = Direction.SOUTH;
+                direction = Direction.WEST;
         }
     }
 }
