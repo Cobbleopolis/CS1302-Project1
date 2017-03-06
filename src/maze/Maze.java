@@ -173,6 +173,7 @@ public class Maze {
      */
     public void findExit() {
         //TODO implement
+
     }
 
     /**
@@ -309,7 +310,7 @@ public class Maze {
      */
     private void turnRight() {
         //TODO implement
-
+        Direction(Right);
     }
 
     /**
@@ -317,6 +318,7 @@ public class Maze {
      */
     private void turnLeft() {
         //TODO implement
+
     }
 
     /**
