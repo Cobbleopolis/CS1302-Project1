@@ -1,3 +1,11 @@
+/*
+  Group Members:
+    Logan Thompson
+    John Nnamezie
+    Robel Adamu
+	Noah Weber
+*/
+
 package maze;
 
 import java.util.Scanner;

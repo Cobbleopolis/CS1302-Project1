@@ -1,3 +1,11 @@
+/*
+  Group Members:
+    Logan Thompson
+    John Nnamezie
+    Robel Adamu
+	Noah Weber
+*/
+
 package maze;
 
 /**
@@ -124,8 +132,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveNorth() {
-        //TODO implement
-
+        if (canMoveNorth() == true)
+            moveNorth();
+        else if (canMoveNorth() == false)
+            turnLeft();
     }
 
     /**
@@ -134,8 +144,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveSouth() {
-        //TODO implement
-
+        if (canMoveSouth() == true)
+            moveSouth();
+        else if (canMoveSouth() == false)
+            turnLeft();
     }
 
     /**
@@ -144,8 +156,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveEast() {
-        //TODO implement
-
+        if (canMoveEast() == true)
+            moveEast();
+        else if (canMoveSouth() == false)
+            turnLeft();
     }
 
     /**
@@ -154,8 +168,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveWest() {
-        //TODO implement
-
+        if (canMoveWest() == true)
+            moveWest();
+        else if (canMoveSouth() == false)
+            turnLeft();
     }
 
     /**
@@ -297,8 +313,6 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveLeft() {
-        //Finish implementing
-
         if (canMoveLeft()) {
             setValueAt(xPos, yPos, 2);
             xPos =- 1;
@@ -309,16 +323,14 @@ public class Maze {
      * Turns the mouse 90° to the right.
      */
     private void turnRight() {
-        //TODO implement
-        turnRight();
+        direction.turnRight();
     }
 
     /**
      * Turns the mouse 90° to the left.
      */
     private void turnLeft() {
-        //TODO implement
-        turnLeft();
+        direction.turnLeft();
     }
 
     /**
