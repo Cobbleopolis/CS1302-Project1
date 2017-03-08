@@ -310,7 +310,7 @@ public class Maze {
      */
     private void turnRight() {
         //TODO implement
-        Direction(Right);
+        turnRight();
     }
 
     /**
@@ -318,7 +318,7 @@ public class Maze {
      */
     private void turnLeft() {
         //TODO implement
-
+        turnLeft();
     }
 
     /**

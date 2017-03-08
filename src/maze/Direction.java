@@ -1,7 +1,7 @@
 package maze;
 
 public enum Direction {
-    NORTH, SOUTH, EAST, WEST
+    NORTH, SOUTH, EAST, WEST;
 
     private void turnRight() {
         switch (direction) {
@@ -35,7 +35,10 @@ public enum Direction {
         }
     }
 
-    private void turnForwards() {
+    //Do we need turnForward and turnBackward functions?
+
+    /*
+    private void turnForward() {
         switch (direction) {
             case NORTH:
                 direction = Direction.EAST;
@@ -51,7 +54,7 @@ public enum Direction {
         }
     }
 
-    private void turnBackwards() {
+    private void turnBackward() {
         switch (direction) {
             case NORTH:
                 direction = Direction.SOUTH;
@@ -66,4 +69,5 @@ public enum Direction {
                 direction = Direction.WEST;
         }
     }
+    */
 }
