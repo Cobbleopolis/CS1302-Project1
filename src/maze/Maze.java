@@ -89,7 +89,11 @@ public class Maze {
      * @return {@code true} if the current location of the mouse is at the exit, {@code false} otherwise.
      */
     public boolean takeStep() {
-        //TODO implement
+        if (canMoveWest())
+            turnLeft();
+        else if (canMoveForward() == false)
+            turnRight();
+        moveForward();
 
         return isAnExit();
     }
@@ -168,7 +172,7 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveWest() {
-        if (canMoveEast()) {
+        if (canMoveWest()) {
             setValueAt(xPos, yPos, 2);
             xPos--;
         }
@@ -299,10 +303,22 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveBackward() {
-        //Finish implementing
         if (canMoveBackwards()) {
             setValueAt(xPos, yPos, 2);
-            yPos =+ 1;
+            switch (direction) {
+                case NORTH:
+                    moveSouth();
+                    break;
+                case SOUTH:
+                    moveNorth();
+                    break;
+                case EAST:
+                    moveWest();
+                    break;
+                case WEST:
+                    moveEast();
+                    break;
+            }
         }
     }
 
@@ -312,10 +328,22 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveRight() {
-        //Finish implementing
         if (canMoveRight()) {
             setValueAt(xPos, yPos, 2);
-            xPos =+ 1;
+            switch (direction) {
+                case NORTH:
+                    moveEast();
+                    break;
+                case SOUTH:
+                    moveWest();
+                    break;
+                case EAST:
+                    moveSouth();
+                    break;
+                case WEST:
+                    moveNorth();
+                    break;
+            }
         }
     }
 
@@ -325,9 +353,22 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveLeft() {
-        if (canMoveLeft()) {
+        if (canMoveRight()) {
             setValueAt(xPos, yPos, 2);
-            xPos =- 1;
+            switch (direction) {
+                case NORTH:
+                    moveWest();
+                    break;
+                case SOUTH:
+                    moveEast();
+                    break;
+                case EAST:
+                    moveSouth();
+                    break;
+                case WEST:
+                    moveNorth();
+                    break;
+            }
         }
     }
 
