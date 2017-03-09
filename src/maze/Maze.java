@@ -90,10 +90,10 @@ public class Maze {
      */
     public boolean takeStep() {
         if (canMoveWest())
+            moveForward();
+        else if (!canMoveForward())
             turnLeft();
-        else if (canMoveForward() == false)
-            turnRight();
-        moveForward();
+        else moveForward();
 
         return isAnExit();
     }
