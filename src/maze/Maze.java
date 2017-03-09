@@ -92,7 +92,7 @@ public class Maze {
         if (canMoveWest())
             moveForward();
         else if (!canMoveForward())
-            turnLeft();
+            turnRight();
         else moveForward();
 
         return isAnExit();
@@ -183,17 +183,18 @@ public class Maze {
      * @return The current value of {@link Maze#exitFound} after the check.
      */
     private boolean isAnExit() {
-        //TODO implement
-
-        return exitFound;
+        //if (arrMaze[0].length - 1, 0)
+            return exitFound;
     }
 
     /**
      * Finds the path without stopping at every step.
      */
     public void findExit() {
-        //TODO implement
-
+        do{
+            takeStep();
+        }
+        while(!isAnExit());
     }
 
     /**
@@ -384,10 +385,10 @@ public class Maze {
                 direction = Direction.WEST;
                 break;
             case WEST:
-                direction = Direction.NORTH;
+                direction = Direction.SOUTH;
                 break;
             case EAST:
-                direction = Direction.SOUTH;
+                direction = Direction.NORTH;
         }
     }
 
@@ -397,16 +398,16 @@ public class Maze {
     private void turnLeft() {
         switch (direction) {
             case NORTH:
-                direction = Direction.NORTH;
-                break;
-            case SOUTH:
-                direction = Direction.SOUTH;
-                break;
-            case WEST:
                 direction = Direction.WEST;
                 break;
-            case EAST:
+            case SOUTH:
                 direction = Direction.EAST;
+                break;
+            case WEST:
+                direction = Direction.NORTH;
+                break;
+            case EAST:
+                direction = Direction.SOUTH;
         }
     }
 

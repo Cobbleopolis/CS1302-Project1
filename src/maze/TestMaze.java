@@ -54,9 +54,11 @@ public class TestMaze {
             input.toLowerCase();
             if(input.equals("t")) {
                 keepAsking = !myMaze.takeStep();
+                myMaze.displayMaze();
             } else if(input.equals("s")) {
                 myMaze.findExit();
                 keepAsking = false;
+                myMaze.displayPath();
             } else if(input.equals("q")) {
                 keepAsking = false;
             } else {
