@@ -18,7 +18,7 @@ public class Maze {
     /**
      * A boolean determining if debug printing should be used when printing the array.
      */
-    static boolean debugPrint = false; //TODO remove before final turn in?
+    static boolean debugPrint = false;
 
     /**
      * The array that stores the representation of the maze.
@@ -89,8 +89,8 @@ public class Maze {
      * @return {@code true} if the current location of the mouse is at the exit, {@code false} otherwise.
      */
     public boolean takeStep() {
-        if (canMoveWest())
-            moveForward();
+        if (canMoveLeft())
+            turnLeft();
         else if (!canMoveForward())
             turnRight();
         else moveForward();
