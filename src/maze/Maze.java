@@ -132,10 +132,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveNorth() {
-        if (canMoveNorth() == true)
-            moveNorth();
-        else if (canMoveNorth() == false)
-            turnLeft();
+        if (canMoveNorth()) {
+            setValueAt(xPos, yPos, 2);
+            yPos--;
+        }
     }
 
     /**
@@ -144,10 +144,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveSouth() {
-        if (canMoveSouth() == true)
-            moveSouth();
-        else if (canMoveSouth() == false)
-            turnLeft();
+        if (canMoveSouth()) {
+            setValueAt(xPos, yPos, 2);
+            yPos++;
+        }
     }
 
     /**
@@ -156,10 +156,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveEast() {
-        if (canMoveEast() == true)
-            moveEast();
-        else if (canMoveSouth() == false)
-            turnLeft();
+        if (canMoveEast()) {
+            setValueAt(xPos, yPos, 2);
+            xPos++;
+        }
     }
 
     /**
@@ -168,10 +168,10 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveWest() {
-        if (canMoveWest() == true)
-            moveWest();
-        else if (canMoveSouth() == false)
-            turnLeft();
+        if (canMoveEast()) {
+            setValueAt(xPos, yPos, 2);
+            xPos--;
+        }
     }
 
     /**
@@ -323,14 +323,38 @@ public class Maze {
      * Turns the mouse 90° to the right.
      */
     private void turnRight() {
-        direction.turnRight();
+        switch (direction) {
+            case NORTH:
+                direction = Direction.EAST;
+                break;
+            case SOUTH:
+                direction = Direction.WEST;
+                break;
+            case WEST:
+                direction = Direction.NORTH;
+                break;
+            case EAST:
+                direction = Direction.SOUTH;
+        }
     }
 
     /**
      * Turns the mouse 90° to the left.
      */
     private void turnLeft() {
-        direction.turnLeft();
+        switch (direction) {
+            case NORTH:
+                direction = Direction.NORTH;
+                break;
+            case SOUTH:
+                direction = Direction.SOUTH;
+                break;
+            case WEST:
+                direction = Direction.WEST;
+                break;
+            case EAST:
+                direction = Direction.EAST;
+        }
     }
 
     /**
