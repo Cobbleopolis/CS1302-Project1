@@ -93,7 +93,7 @@ public class Maze {
             turnLeft();
         else if (!canMoveForward())
             turnRight();
-        else moveForward();
+        moveForward();
 
         return isAnExit();
     }
@@ -267,7 +267,7 @@ public class Maze {
             case EAST:
                 return canMoveNorth();
             case WEST:
-                return canMoveWest();
+                return canMoveSouth();
             default:
                 return false;
         }
@@ -385,10 +385,10 @@ public class Maze {
                 direction = Direction.WEST;
                 break;
             case WEST:
-                direction = Direction.SOUTH;
+                direction = Direction.NORTH;
                 break;
             case EAST:
-                direction = Direction.NORTH;
+                direction = Direction.SOUTH;
         }
     }
 
@@ -404,10 +404,10 @@ public class Maze {
                 direction = Direction.EAST;
                 break;
             case WEST:
-                direction = Direction.NORTH;
+                direction = Direction.SOUTH;
                 break;
             case EAST:
-                direction = Direction.SOUTH;
+                direction = Direction.NORTH;
         }
     }
 
