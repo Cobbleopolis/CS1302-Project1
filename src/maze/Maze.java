@@ -274,10 +274,22 @@ public class Maze {
      * If the mouse has moved, the previous location of the mouse will be set to {@code 2}.
      */
     private void moveForward() {
-        //Finish implementing
         if (canMoveForward()) {
             setValueAt(xPos, yPos, 2);
-            yPos =- 1;
+            switch (direction) {
+                case NORTH:
+                    moveNorth();
+                    break;
+                case SOUTH:
+                    moveSouth();
+                    break;
+                case EAST:
+                    moveEast();
+                    break;
+                case WEST:
+                    moveWest();
+                    break;
+            }
         }
     }
 
