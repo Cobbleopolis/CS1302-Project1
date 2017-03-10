@@ -183,7 +183,7 @@ public class Maze {
      * @return The current value of {@link Maze#exitFound} after the check.
      */
     private boolean isAnExit() {
-        exitFound = yPos == 0 && xPos == arrMaze[0].length - 1;
+        exitFound = yPos == 3 && xPos == arrMaze[0].length - 1;
         return exitFound;
     }
 
@@ -193,8 +193,7 @@ public class Maze {
     public void findExit() {
         do{
             takeStep();
-        }
-        while(!isAnExit());
+        } while(!isAnExit());
     }
 
     /**
