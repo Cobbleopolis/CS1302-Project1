@@ -51,7 +51,7 @@ public class Maze {
      * @param arrMaze The array representing the array to initialize with.
      */
     public Maze(int[][] arrMaze) {
-        this.arrMaze = arrMaze;
+        this.arrMaze = arrMaze.clone();
         xPos = 0;
         yPos = this.arrMaze.length - 1;
         direction = Direction.NORTH;
