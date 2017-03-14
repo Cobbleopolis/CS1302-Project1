@@ -49,23 +49,25 @@ public class TestMaze {
         do {
             System.out.println("T = Take a step | S = Show path | Q = Quit");
             System.out.print("Enter command: ");
-            input = scan.nextLine();
-            input.trim();
-            input.toLowerCase();
-            if(input.equals("t")) {
-                keepAsking = !myMaze.takeStep();
-                if (keepAsking)
-                    myMaze.displayMaze();
-                else
+            switch (scan.nextLine().toLowerCase().charAt(0)) {
+                case 't':
+                    keepAsking = !myMaze.takeStep();
+                    if (keepAsking)
+                        myMaze.displayMaze();
+                    else
+                        myMaze.displayPath();
+                    break;
+                case 's':
+                    myMaze.findExit();
+                    keepAsking = false;
                     myMaze.displayPath();
-            } else if(input.equals("s")) {
-                myMaze.findExit();
-                keepAsking = false;
-                myMaze.displayPath();
-            } else if(input.equals("q")) {
-                keepAsking = false;
-            } else {
-                System.out.println("ERR: Invalid input");
+                    break;
+                case 'q':
+                    keepAsking = false;
+                    break;
+                default:
+                    System.out.println("ERR: Invalid input");
+                    break;
             }
         } while(keepAsking);
         System.out.println("Quitting program...");
